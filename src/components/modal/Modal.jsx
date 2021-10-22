@@ -5,7 +5,7 @@ const Modal = props => {
     const [active,setActive]=useState(false);
     useEffect(()=>{
         setActive(props.active);
-    },[])
+    },[props.active])
     return (
         <div 
         id={props.id}
