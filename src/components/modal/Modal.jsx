@@ -5,8 +5,8 @@ const Modal = props => {
     const [active,setActive]=useState(false);
     useEffect(()=>{
         setActive(props.active);
-    
-    },[props])
+    // eslint-disable-next-line
+    },[props.active])
     return (
         <div 
         id={props.id}
