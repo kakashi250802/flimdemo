@@ -5,7 +5,8 @@ const Modal = props => {
     const [active,setActive]=useState(false);
     useEffect(()=>{
         setActive(props.active);
-    },[props.active])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
     return (
         <div 
         id={props.id}
