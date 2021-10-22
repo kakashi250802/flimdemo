@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React,{useState,useEffect,useRef} from 'react'
 import PropTypes from 'prop-types'
 import './modal.scss';
@@ -5,7 +6,7 @@ const Modal = props => {
     const [active,setActive]=useState(false);
     useEffect(()=>{
         setActive(props.active);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     },[])
     return (
         <div 
