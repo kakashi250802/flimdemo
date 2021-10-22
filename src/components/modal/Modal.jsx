@@ -20,23 +20,23 @@ Modal.propTypes = {
     active:PropTypes.bool,
     id:PropTypes.string,
 }
-export const modalContent = props =>{
+export const ModalContent = props =>{
    // eslint-disable-next-line react-hooks/rules-of-hooks
    const contentRef=useRef(null);
    const closeModal=()=>{
-    contentRef.current.parentNode.classList.remove("active");
+    contentRef.current.parentNode.classList.remove('active');
     if(props.onClose) props.onClose();
 }
     return (
-        <div className="modal__content">
+        <div ref={contentRef} className="modal__content">
             {props.children}
-            <div className="modal__content__close" onclick={closeModal}>
+            <div className="modal__content__close" onClick={closeModal}>
                 <i className="bx bx-x"></i>
             </div>
         </div>
     )
 }
-modalContent.propTypes = {
+ModalContent.propTypes = {
     onClose: PropTypes.func,
 }
 export default Modal
